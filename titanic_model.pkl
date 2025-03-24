@@ -1,0 +1,9 @@
+import joblib
+
+# Save feature names
+feature_names = X.columns.tolist()
+joblib.dump(feature_names, 'feature_names.pkl')
+
+# Save the trained model
+joblib.dump(model, 'xgb_model.pkl')
+joblib.dump(scaler, 'scaler.pkl')
